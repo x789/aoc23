@@ -4,7 +4,7 @@
 /// <summary>
 /// Trebuchet?! - Part 1
 /// </summary>
-public sealed class Day01aSolver
+public sealed class Part1Solver
 {
 	private static readonly Dictionary<string, uint> s_mapping = new() { { "1", 1 }, { "one", 1}, { "2", 2 }, { "two", 2}, { "3", 3 }, { "three", 3}, { "4", 4 }, { "four", 4}, { "5", 5 }, { "five", 5}, { "6", 6 }, { "six", 6}, { "7", 7 }, { "seven", 7}, { "8", 8 }, { "eight", 8}, { "9", 9 }, { "nine", 9} };
 	internal uint CalibrationValue { get; private set; } = 0;

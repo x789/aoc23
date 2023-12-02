@@ -1,6 +1,6 @@
 ﻿// Copyright (c) 2023 - TillW
 // Licensed to you under the MIT License
-public sealed class Day01b
+public sealed class Part2SolverTests
 {
 	[Theory]
 	[InlineData("two1nine", 29)]
@@ -17,7 +17,7 @@ public sealed class Day01b
 	[InlineData("6sbzfqfdm", 66)]
 	public void Examples(string input, uint expected)
 	{
-		var solver = new Day01bSolver();
+		var solver = new Part2Solver();
 		solver.AddInput(input);
 
 		var actual = solver.CalibrationValue;
@@ -29,7 +29,7 @@ public sealed class Day01b
 	[InlineData(new string[] { "two1nine", "eightwothree", "abcone2threexyz", "xtwone3four", "4nineeightseven2", "zoneight234", "7pqrstsixteen" }, 281)]
 	public void Example(string[] input, uint expected)
 	{
-		var solver = new Day01bSolver();
+		var solver = new Part2Solver();
 		foreach (var line in input)
 			solver.AddInput(line);
 
@@ -41,12 +41,12 @@ public sealed class Day01b
 	[Fact]
 	public void Puzzle()
 	{
-		var solver = new Day01bSolver();
-		foreach (var line in InputReader.ReadFile("Day01.txt"))
+		var solver = new Part2Solver();
+		foreach (var line in InputReader.ReadFile("Input.txt"))
 			solver.AddInput(line);
 
 		var actual = solver.CalibrationValue;
 
-		Assert.Equal(54885u, actual);
+		Assert.Equal(0u, actual);
 	}
 }
